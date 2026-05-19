@@ -16,9 +16,9 @@ const LandingPage = () => {
 
             <div className="min-h-screen bg-[#f7f7f7] overflow-hidden">
                 {/* Top Bar */}
-                <div className="hidden md:flex items-center justify-between px-20 py-3 text-sm text-gray-600 border-b bg-[#f8f8f8]">
-                    <div className="flex items-center gap-12">
-                        <div className="border-r pr-10">
+                <div className="hidden lg:flex items-center justify-between px-4 md:px-8 lg:px-12 xl:px-16 py-3 text-sm text-gray-600 border-b bg-[#f8f8f8]">
+                    <div className="flex items-center gap-8 xl:gap-12">
+                        <div className="border-r pr-6 xl:pr-10">
                             <p className="font-medium">📍 Наш адрес:</p>
                             <p>г. Бишкек, ул. Ляляля 69</p>
                         </div>
@@ -36,57 +36,56 @@ const LandingPage = () => {
                 </div>
 
                 {/* Navbar */}
-                <nav className="bg-white px-20 py-5 flex items-center justify-between shadow-sm">
+                <nav className="bg-white px-4 md:px-8 lg:px-12 xl:px-16 py-4 md:py-5 flex items-center justify-between shadow-sm">
                     {/* Logo */}
-                    <div className="flex items-center">
+                    <div className="flex items-center shrink-0">
                         <img
                             src={toplogo}
                             alt="Logo"
-                            className="w-[120px] md:w-[130px] object-contain"
+                            className="w-[85px] sm:w-[100px] md:w-[120px] object-contain"
                         />
                     </div>
 
                     {/* Menu */}
-                    <ul className="hidden md:flex gap-14 text-[18px] text-gray-700 font-medium">
+                    <ul className="hidden lg:flex items-center gap-8 xl:gap-12 text-[16px] xl:text-[18px] text-gray-700 font-medium">
                         <li className="cursor-pointer hover:text-blue-600">Это мы</li>
                         <li className="cursor-pointer hover:text-blue-600">Почему мы?</li>
-                        <li className="cursor-pointer hover:text-blue-600">
-                            А вот поэтому
-                        </li>
+                        <li className="cursor-pointer hover:text-blue-600">А вот поэтому</li>
                         <li className="cursor-pointer hover:text-blue-600">Контакты</li>
                     </ul>
 
                     {/* Button */}
-                    <button className="bg-blue-600 text-white px-8 py-3 rounded-md font-medium hover:bg-blue-700 transition">
+                    <button className="bg-blue-600 text-white px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-md text-sm md:text-base font-medium hover:bg-blue-700 transition shrink-0">
                         Заказать звонок
                     </button>
                 </nav>
 
                 {/* Hero Section */}
-                <section className="flex flex-col md:flex-row items-center justify-between px-20 py-20">
+                <section className="flex flex-col-reverse lg:flex-row items-center justify-between px-4 md:px-8 lg:px-12 xl:px-16 py-10 md:py-16 lg:py-20 gap-10">
+
                     {/* Left Content */}
-                    <div className="max-w-[520px]">
-                        <h1 className="text-[72px] font-bold leading-[82px] text-[#2d2d2d]">
+                    <div className="w-full lg:w-[45%] text-center lg:text-left">
+                        <h1 className="text-[34px] sm:text-[46px] md:text-[58px] lg:text-[72px] font-bold leading-tight text-[#2d2d2d]">
                             Affordable truck service
                         </h1>
 
-                        <p className="mt-8 text-[22px] text-gray-600 leading-9">
+                        <p className="mt-4 md:mt-6 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] text-gray-600 leading-7 md:leading-8 lg:leading-9">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            <br />
+                            <br className="hidden md:block" />
                             Nunc odio in et, lectus sit lorem id integer.
                         </p>
 
-                        <button className="mt-10 bg-blue-600 text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-blue-700 transition">
+                        <button className="mt-6 md:mt-8 bg-blue-600 text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-sm md:text-lg font-medium hover:bg-blue-700 transition">
                             Чета сделать
                         </button>
                     </div>
 
                     {/* Right Image */}
-                    <div className="w-full md:w-[58%] mt-14 md:mt-0 flex justify-end">
+                    <div className="w-full lg:w-[55%] flex justify-center lg:justify-end">
                         <img
                             src={busimg}
                             alt="Truck"
-                            className="w-full max-w-[900px] object-contain"
+                            className="w-full max-w-[320px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px] object-contain"
                         />
                     </div>
                 </section>
@@ -95,125 +94,98 @@ const LandingPage = () => {
             {/* // secondsection------------------------------- */}
 
             {/* Services Section */}
-            <section className="bg-[#f7f7f7] py-20 px-6 md:px-20">
+            {/* Services + Bottom Sections */}
+            <section className="bg-[#f7f7f7] py-14 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
                 {/* Heading */}
-                <div className="text-center mb-14">
-                    <h2 className="text-[52px] font-bold text-[#2d2d2d] leading-tight">
+                <div className="text-center mb-10">
+                    <h2 className="text-3xl sm:text-4xl md:text-[52px] font-bold text-[#2d2d2d] leading-tight">
                         Любые услуги за ваши денишки
                     </h2>
-                    <p className="mt-4 text-[24px] text-gray-500 leading-9">
+                    <p className="mt-4 text-base sm:text-lg md:text-[22px] text-gray-500 leading-7 md:leading-9">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                        <br />
+                        <br className="hidden md:block" />
                         odio in et, lectus sit lorem id integer.
                     </p>
                 </div>
 
                 {/* Cards */}
-                <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full max-w-[1400px] mx-auto">
                     {/* Card 1 */}
-                    <div className="bg-[#f1f2f5] rounded-2xl p-8 flex justify-between items-center min-h-[270px]">
-                        <div className="max-w-[260px]">
-                            <h3 className="text-[28px] font-bold text-[#333] leading-9">
+                    <div className="bg-[#f1f2f5] rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 min-h-[250px]">
+                        <div className="max-w-[260px] text-center sm:text-left">
+                            <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold text-[#333] leading-8">
                                 Б/у запчасти для грузовых авто из Европы
                             </h3>
-                            <p className="mt-5 text-gray-500 text-[20px] leading-8">
+                            <p className="mt-4 text-gray-500 text-sm sm:text-base md:text-lg leading-7">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Nunc odio in et, lectus sit lorem id integer.
                             </p>
                         </div>
-                        <img src={bike1} alt="" className="w-[220px] object-contain" />
+                        <img src={bike1} alt="" className="w-[160px] sm:w-[190px] md:w-[220px] object-contain" />
                     </div>
 
                     {/* Card 2 */}
-                    <div className="bg-[#f1f2f5] rounded-2xl p-8 flex justify-between items-center min-h-[270px]">
-                        <div className="max-w-[260px]">
-                            <h3 className="text-[28px] font-bold text-[#333] leading-9">
+                    <div className="bg-[#f1f2f5] rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 min-h-[250px]">
+                        <div className="max-w-[260px] text-center sm:text-left">
+                            <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold text-[#333] leading-8">
                                 Автомойка грузовых и легковых авто
                             </h3>
-                            <p className="mt-5 text-gray-500 text-[20px] leading-8">
+                            <p className="mt-4 text-gray-500 text-sm sm:text-base md:text-lg leading-7">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Nunc odio in et, lectus sit lorem id integer.
                             </p>
                         </div>
-                        <img src={bike2} alt="" className="w-[230px] object-contain" />
+                        <img src={bike2} alt="" className="w-[170px] sm:w-[200px] md:w-[230px] object-contain" />
                     </div>
 
                     {/* Card 3 */}
-                    <div className="bg-[#f1f2f5] rounded-2xl p-8 flex justify-between items-center min-h-[270px]">
-                        <div className="max-w-[260px]">
-                            <h3 className="text-[28px] font-bold text-[#333] leading-9">
+                    <div className="bg-[#f1f2f5] rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 min-h-[250px]">
+                        <div className="max-w-[260px] text-center sm:text-left">
+                            <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold text-[#333] leading-8">
                                 Магазин аксессуаров
                             </h3>
-                            <p className="mt-5 text-gray-500 text-[20px] leading-8">
+                            <p className="mt-4 text-gray-500 text-sm sm:text-base md:text-lg leading-7">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Nunc odio in et, lectus sit lorem id integer.
                             </p>
                         </div>
-                        <img src={bike3} alt="" className="w-[250px] object-contain" />
+                        <img src={bike3} alt="" className="w-[180px] sm:w-[220px] md:w-[250px] object-contain" />
                     </div>
 
                     {/* Card 4 */}
-                    <div className="bg-[#f1f2f5] rounded-2xl p-8 flex justify-between items-center min-h-[270px]">
-                        <div className="max-w-[260px]">
-                            <h3 className="text-[28px] font-bold text-[#333] leading-9">
+                    <div className="bg-[#f1f2f5] rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center gap-4 min-h-[250px]">
+                        <div className="max-w-[260px] text-center sm:text-left">
+                            <h3 className="text-xl sm:text-2xl md:text-[28px] font-bold text-[#333] leading-8">
                                 Пункт замены масла легковых авто
                             </h3>
-                            <p className="mt-5 text-gray-500 text-[20px] leading-8">
+                            <p className="mt-4 text-gray-500 text-sm sm:text-base md:text-lg leading-7">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Nunc odio in et, lectus sit lorem id integer.
                             </p>
                         </div>
-                        <img src={bike4} alt="" className="w-[200px] object-contain" />
+                        <img src={bike4} alt="" className="w-[150px] sm:w-[180px] md:w-[200px] object-contain" />
                     </div>
-
                 </div>
 
-                {/* Brand Section */}
-                <section className="bg-[#f7f7f7] px-6 md:px-20 pt-10">
-                    <div className="max-w-6xl mx-auto">
-                        <img
-                            src={btsection}
-                            alt="Brand Section"
-                            className="w-full object-contain rounded-2xl"
-                        />
-                    </div>
-                </section>
+                {/* Brand */}
+                <div className="w-full max-w-[1400px] mx-auto pt-10">
+                    <img src={btsection} alt="Brand" className="w-full rounded-2xl object-cover" />
+                </div>
 
-                {/* Map Section */}
-                <section className=" md:px-20 pb-20">
+                {/* Map */}
+                <div className="w-full max-w-[1400px] mx-auto pt-10">
+                    <img src={mapimg} alt="Map" className="w-full object-cover rounded-2xl" />
+                </div>
 
-                    {/* Right Map Image */}
-                    <div>
-                        <img
-                            src={mapimg}
-                            alt="Map"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-
-                </section>
-
-                {/* Travel Image Section */}
-                <section className="bg-[#f7f7f7] px-6 md:px-20">
-                    <div className="max-w-6xl mx-auto">
-                        <img
-                            src={travelsimg}
-                            alt="Travel"
-                            className="w-full h-auto object-cover rounded-lg"
-                        />
-                    </div>
-                </section>
+                {/* Travel */}
+                <div className="w-full max-w-[1400px] mx-auto pt-10">
+                    <img src={travelsimg} alt="Travel" className="w-full rounded-2xl object-cover" />
+                </div>
 
                 {/* Contact Section */}
                 <section
-                    className="w-full min-h-[450px] bg-cover bg-center flex items-center justify-end px-6 md:px-20"
+                    className="w-full min-h-[420px] bg-cover bg-center flex items-center justify-end px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-10"
                     style={{ backgroundImage: `url(${footerimg})` }}
                 >
                     <div className="bg-white rounded-xl p-4 md:p-5 w-full max-w-[290px] shadow-md">
-
                         {/* Heading */}
-                        <h2 className="text-[28px] md:text-[32px] font-bold text-[#2d2d2d] leading-tight">
+                        <h2 className="text-[26px] md:text-[30px] font-bold text-[#2d2d2d] leading-tight">
                             Остались <br /> вопросы?
                         </h2>
 
@@ -245,23 +217,22 @@ const LandingPage = () => {
                 </section>
 
                 {/* Footer Section */}
-                {/* Footer Section */}
-                <footer className="bg-[#111111] text-white w-full py-10 flex justify-center">
-                    <div className="w-full max-w-[1255px] px-6 md:px-12">
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+                <footer className="bg-[#111111] text-white w-full py-10 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+                    <div className="w-full max-w-[1400px] mx-auto">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
 
                             {/* Logo */}
-                            <div className="flex justify-center md:justify-start">
+                            <div className="flex justify-center sm:justify-start">
                                 <img
                                     src={flogo}
                                     alt="Logo"
-                                    className="w-[120px] object-contain"
+                                    className="w-[90px] md:w-[110px] object-contain"
                                 />
                             </div>
 
                             {/* Menu */}
-                            <div className="text-center md:text-left">
-                                <h3 className="text-xl font-semibold mb-4">Главная</h3>
+                            <div className="text-center sm:text-left">
+                                <h3 className="text-lg md:text-xl font-semibold mb-4">Главная</h3>
                                 <ul className="space-y-2 text-sm text-gray-300">
                                     <li>Это мы</li>
                                     <li>Кто мы</li>
@@ -272,8 +243,8 @@ const LandingPage = () => {
                             </div>
 
                             {/* Contact */}
-                            <div className="text-center md:text-left">
-                                <h3 className="text-xl font-semibold mb-4">Контакты</h3>
+                            <div className="text-center sm:text-left">
+                                <h3 className="text-lg md:text-xl font-semibold mb-4">Контакты</h3>
                                 <ul className="space-y-2 text-sm text-gray-300">
                                     <li>+7 (708) 802 88 88</li>
                                     <li>+7 (708) 803 88 88</li>
@@ -285,8 +256,10 @@ const LandingPage = () => {
                             </div>
 
                             {/* Social */}
-                            <div className="text-center md:text-left">
-                                <h3 className="text-xl font-semibold mb-4">Следите за нами</h3>
+                            <div className="text-center sm:text-left">
+                                <h3 className="text-lg md:text-xl font-semibold mb-4">
+                                    Следите за нами
+                                </h3>
                                 <ul className="space-y-2 text-sm text-gray-300">
                                     <li>📘 truck_service_officlaL</li>
                                     <li>📷 truck_service_officlaL</li>
@@ -294,8 +267,8 @@ const LandingPage = () => {
                             </div>
                         </div>
 
-                        {/* Bottom line */}
-                        <div className="border-t border-gray-700 mt-8 pt-4 text-gray-400 text-xs text-center md:text-left">
+                        {/* Bottom */}
+                        <div className="border-t border-gray-700 mt-8 pt-4 text-gray-400 text-xs text-center sm:text-left">
                             Copyright © Truck Services 2022. All rights reserved.
                         </div>
                     </div>
